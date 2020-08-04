@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+ db:
+  image: stanleywxc/postgres:12.3
+  restart: always
+  environment:
+   POSTGRES_PASSWORD: mypassword
+  volumes:
+    - /Users/stanley/tmp/data/postgres/data:/var/lib/postgresql/data
+  ports:
+    - 5432:5432
