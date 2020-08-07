@@ -5,7 +5,6 @@ services:
   image: stanleywxc/postgres:12.3
   restart: always
   environment:
-   POSTGRES_PASSWORD: mypassword
   volumes:
     - /Users/stanley/tmp/data/postgres/data:/var/lib/postgresql/data
   ports:
