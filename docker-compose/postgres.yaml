@@ -1,12 +1,17 @@
-version: '3.1'
+version: '3.5'
 
 services:
  postgres-db:
   image: stanleywxc/postgres:12.3
   container_name: postgres-db
   restart: always
-  environment:
   volumes:
     - /Users/stanley/tmp/data/postgres/data:/var/lib/postgresql/data
   ports:
     - 5432:5432
+  networks:
+    - postgres-net
+
+networks:
+  postgres-net:
+    name: postgres-net
